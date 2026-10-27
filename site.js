@@ -101,16 +101,16 @@
     },
     member: {
       ja: {
-        title: '会員ログイン｜会計エンテック事務所',
-        desc: '会計エンテック事務所の会員ログイン。受講中の講座、学習進捗、教材ダウンロード、アカウント設定を管理できます。'
+        title: '会員機能は準備中｜会計エンテック事務所',
+        desc: '会計エンテック事務所の会員機能は現在準備中です。'
       },
       zh: {
-        title: '會員登入｜会計エンテック事務所',
-        desc: '会計エンテック事務所會員登入。管理修課中的課程、學習進度、教材下載與帳號設定。'
+        title: '會員功能準備中｜会計エンテック事務所',
+        desc: '会計エンテック事務所的會員功能目前仍在準備中。'
       },
       en: {
-        title: 'Member Sign-in | Entech Office',
-        desc: 'Sign in to Entech Office: manage your enrolled courses, learning progress, downloadable materials and account settings.'
+        title: 'Member Access Coming Soon | Entech Office',
+        desc: 'Member access at Entech Office is currently in preparation.'
       }
     },
     design: {
