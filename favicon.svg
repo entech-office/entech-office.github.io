@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="会計エンテック事務所">
+<title>会計エンテック事務所 — 枠</title>
+<rect width="32" height="32" rx="3" fill="#161A1D"/>
+<!-- 枠: 16px 専用重描版（線幅 3.4 / 方塊 9.6）。フレームは反転、方塊は session 色。 -->
+<path d="M27 17V5H5V27H17" fill="none" stroke="#F2F4F5" stroke-width="3.4"/>
+<rect x="17.2" y="17.2" width="9.6" height="9.6" fill="#1DC386"/>
+</svg>
