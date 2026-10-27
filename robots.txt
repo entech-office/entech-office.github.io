@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://entech-office.github.io/sitemap.xml
