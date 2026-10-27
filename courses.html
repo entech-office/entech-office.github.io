@@ -96,14 +96,10 @@
         <button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
       </div>
       <div class="mbr">
-        <a class="mbr__login" href="member.html#login" data-mbr-out>
+        <button class="mbr__login mbr__login--disabled" type="button" disabled aria-label="ログイン機能は準備中です">
           <svg aria-hidden="true"><use href="#user"/></svg>
-          <span><span class="t" data-l="ja">ログイン</span><span class="t" data-l="zh">登入</span><span class="t" data-l="en">Sign in</span></span>
-        </a>
-        <a class="mbr__user" href="member.html#center" data-mbr-in hidden>
-          <span class="mbr__ava" aria-hidden="true">KE</span>
-          <span><span class="t" data-l="ja">マイページ</span><span class="t" data-l="zh">會員中心</span><span class="t" data-l="en">My page</span></span>
-        </a>
+          <span><span class="t" data-l="ja">ログイン（準備中）</span><span class="t" data-l="zh">登入（準備中）</span><span class="t" data-l="en">Sign in (coming soon)</span></span>
+        </button>
       </div>
       <button class="mnav-btn" type="button" data-mnav-toggle aria-expanded="false" aria-controls="mnav">
         <svg aria-hidden="true"><use href="#menu"/></svg>
@@ -117,7 +113,7 @@
       <li><a href="index.html#projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Work</span></a></li>
       <li><a href="courses.html"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></a></li>
       <li><a href="index.html#contact"><span class="t" data-l="ja">お問い合わせ</span><span class="t" data-l="zh">聯絡我們</span><span class="t" data-l="en">Contact</span></a></li>
-      <li><a href="member.html"><span class="t" data-l="ja">会員ログイン</span><span class="t" data-l="zh">會員登入</span><span class="t" data-l="en">Member sign-in</span></a></li>
+      <li><span class="mnav__disabled" aria-disabled="true"><span class="t" data-l="ja">会員ログイン（準備中）</span><span class="t" data-l="zh">會員登入（準備中）</span><span class="t" data-l="en">Member sign-in (coming soon)</span></span></li>
     </ul>
   </div>
 </header>
@@ -505,10 +501,10 @@
       </h2>
       <p style="max-width:46ch"><span class="t" data-l="ja">公開時期とプラットフォームが決まり次第、登録いただいたアドレスにお知らせします。会員登録の導線は実装時に接続します。</span><span class="t" data-l="zh">時間與平台上架方式確定後，會通知你留下的信箱。會員註冊動線將在實作階段接上。</span><span class="t" data-l="en">We'll email you once the dates and platform are fixed. The membership sign-up path is wired in at implementation.</span></p>
       <div class="hero__cta" style="margin-top:0">
-        <a class="btn" href="member.html#register">
+        <button class="btn btn--disabled" type="button" disabled aria-label="会員登録機能は準備中です">
           <span class="t" data-l="ja">会員登録へ</span><span class="t" data-l="zh">前往註冊會員</span><span class="t" data-l="en">Create an account</span>
           <span class="btn__arrow" aria-hidden="true">→</span>
-        </a>
+        </button>
         <a class="btn btn--ghost" href="index.html#contact">
           <span class="t" data-l="ja">個別に問い合わせる</span><span class="t" data-l="zh">個別詢問</span><span class="t" data-l="en">Ask us directly</span>
         </a>
@@ -534,7 +530,6 @@
           <li><a href="index.html#services"><span class="t" data-l="ja">サービス</span><span class="t" data-l="zh">服務</span><span class="t" data-l="en">Services</span></a></li>
           <li><a href="index.html#projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Work</span></a></li>
           <li><a href="courses.html"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></a></li>
-          <li><a href="member.html"><span class="t" data-l="ja">会員ログイン</span><span class="t" data-l="zh">會員登入</span><span class="t" data-l="en">Member sign-in</span></a></li>
         </ul>
       </div>
       <div>
@@ -550,7 +545,7 @@
       </div>
     </div>
     <div class="ftr__bt">
-      <span>© <span data-year>2026</span> 会計エンテック事務所</span>
+      <span>© 2024–2026 entech-office. All rights reserved.</span>
       <span><span class="t" data-l="ja">プライバシーポリシー（準備中）</span><span class="t" data-l="zh">隱私權政策（準備中）</span><span class="t" data-l="en">Privacy policy (in preparation)</span> · <span class="t" data-l="ja">特定商取引法に基づく表記（準備中）</span><span class="t" data-l="zh">商業交易法標示（準備中）</span><span class="t" data-l="en">Commercial disclosure (in preparation)</span></span>
     </div>
     <div class="ftr__langs" style="margin-top:var(--sp-4);padding-top:var(--sp-4);border-top:1px solid var(--ink-800)">

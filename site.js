@@ -9,7 +9,6 @@
 
   var root = document.documentElement;
   var LANG_KEY = 'entech-lang';
-  var AUTH_KEY = 'entech-auth';
   var LANGS = ['ja', 'zh', 'en'];
 
   /* ---------- 枠 · session colour --------------------------------------------
@@ -196,68 +195,7 @@
     });
   }
 
-  /* ---------- Member state (prototype only) ---------- */
-  function authState() {
-    try { return localStorage.getItem(AUTH_KEY) === '1'; } catch (e) { return false; }
-  }
-  function paintAuth() {
-    var on = authState();
-    document.querySelectorAll('[data-mbr-in]').forEach(function (el) { el.hidden = !on; });
-    document.querySelectorAll('[data-mbr-out]').forEach(function (el) { el.hidden = on; });
-    document.querySelectorAll('[data-auth-view]').forEach(function (el) {
-      var want = el.getAttribute('data-auth-view');
-      el.hidden = (want === 'in') !== on;
-    });
-    document.querySelectorAll('[data-auth-seg]').forEach(function (el) {
-      var want = el.getAttribute('data-auth-seg');
-      var el2 = el.querySelector('button');
-      el.setAttribute('aria-pressed', String((want === 'in') === on));
-      if (el2) el2.setAttribute('aria-pressed', String((want === 'in') === on));
-    });
-  }
-  paintAuth();
-
-  document.addEventListener('click', function (e) {
-    var t = e.target.closest && e.target.closest('[data-auth-set]');
-    if (t) {
-      try { localStorage.setItem(AUTH_KEY, t.getAttribute('data-auth-set') === 'in' ? '1' : '0'); } catch (er) {}
-      paintAuth();
-      return;
-    }
-    var out = e.target.closest && e.target.closest('[data-auth-out]');
-    if (out) {
-      try { localStorage.removeItem(AUTH_KEY); } catch (er) {}
-      paintAuth();
-    }
-  });
-
-  /* ---------- Reveal only the active member panel ---------- */
-  var tabs = document.querySelectorAll('[data-mtab]');
-  if (tabs.length) {
-    function openPanel(name) {
-      tabs.forEach(function (b) {
-        var on = b.getAttribute('data-mtab') === name;
-        b.setAttribute('aria-selected', String(on));
-        b.setAttribute('tabindex', on ? '0' : '-1');
-      });
-      document.querySelectorAll('[data-mpanel]').forEach(function (p) {
-        p.hidden = p.getAttribute('data-mpanel') !== name;
-      });
-    }
-    tabs.forEach(function (b) {
-      b.addEventListener('click', function () { openPanel(b.getAttribute('data-mtab')); });
-      b.addEventListener('keydown', function (e) {
-        var list = Array.prototype.slice.call(tabs);
-        var i = list.indexOf(b);
-        if (e.key === 'ArrowDown' || e.key === 'ArrowRight') {
-          e.preventDefault(); var n = list[(i + 1) % list.length]; n.focus(); openPanel(n.getAttribute('data-mtab'));
-        } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
-          e.preventDefault(); var p = list[(i - 1 + list.length) % list.length]; p.focus(); openPanel(p.getAttribute('data-mtab'));
-        }
-      });
-    });
-    openPanel(tabs[0].getAttribute('data-mtab'));
-  }
+  /* ---------- Member features are not public yet ---------- */
 
   /* ---------- Course filters (courses.html) ---------- */
   var filterBar = document.querySelector('[data-filters]');
@@ -294,23 +232,6 @@
       runFilter();
     });
     runFilter();
-  }
-
-  /* ---------- Password rule meter (register) ---------- */
-  var pw = document.querySelector('[data-pw]');
-  if (pw) {
-    var rules = document.querySelectorAll('[data-pw-rule]');
-    pw.addEventListener('input', function () {
-      var v = pw.value;
-      var tests = {
-        len: v.length >= 8,
-        mix: /[A-Za-z]/.test(v) && /[0-9]/.test(v),
-        notmail: v.length > 0 && !/^[^@\s]+@[^@\s]+$/.test(v)
-      };
-      rules.forEach(function (li) {
-        li.setAttribute('data-ok', tests[li.getAttribute('data-pw-rule')] ? '1' : '0');
-      });
-    });
   }
 
   /* ---------- Prototype forms: validate in page, never post ---------- */

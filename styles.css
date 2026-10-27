@@ -183,11 +183,18 @@ html[data-lang="en"] .eyebrow{letter-spacing:.14em}
 /* Member area — header */
 .mbr{display:none;align-items:center;gap:var(--sp-2)}
 .mbr__login{
-  display:inline-flex;align-items:center;gap:6px;font-size:var(--fs-xs);color:var(--ink-600);
-  padding:8px 10px;min-height:44px;border-radius:var(--radius);transition:color .2s,background .2s
+  display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:var(--fs-xs);color:var(--ink-600);
+  padding:8px 10px;min-height:44px;border:0;border-radius:var(--radius);background:none;transition:color .2s,background .2s
 }
 .mbr__login:hover{color:var(--ink-900);background:var(--ink-50)}
 .mbr__login svg{width:15px;height:15px}
+.mbr__login--disabled,.mbr__login--disabled:hover{
+  color:var(--ink-400);background:var(--ink-50);border:1px solid var(--ink-200);cursor:not-allowed
+}
+.mnav__disabled{
+  display:flex;align-items:center;min-height:48px;padding:var(--sp-3) var(--sp-6);
+  border-bottom:1px solid var(--ink-100);font-size:var(--fs-base);color:var(--ink-400);cursor:not-allowed
+}
 /* logged-in chip */
 .mbr__user{
   display:inline-flex;align-items:center;gap:8px;padding:5px 10px 5px 5px;min-height:44px;
@@ -831,3 +838,5 @@ form{background:var(--white);border:var(--rule);border-radius:var(--radius);padd
 .btn--action-rev:hover{background:var(--ink-900);border-color:var(--ink-900)}
 .badge--action{background:var(--square-100);color:var(--square-700);border:1px solid var(--square-500)}
 .markdemo{display:flex;align-items:flex-end;gap:26px;flex-wrap:wrap}
+
+.btn--disabled,.btn--disabled:hover{background:var(--ink-200);border-color:var(--ink-200);color:var(--ink-500);cursor:not-allowed}
