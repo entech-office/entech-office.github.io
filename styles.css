@@ -840,3 +840,8 @@ form{background:var(--white);border:var(--rule);border-radius:var(--radius);padd
 .markdemo{display:flex;align-items:flex-end;gap:26px;flex-wrap:wrap}
 
 .btn--disabled,.btn--disabled:hover{background:var(--ink-200);border-color:var(--ink-200);color:var(--ink-500);cursor:not-allowed}
+
+.link--disabled{color:var(--ink-400);cursor:not-allowed}
+.nav .link--disabled{display:inline-flex;align-items:center;min-height:44px;font-size:var(--fs-sm)}
+.mnav .link--disabled{display:flex;align-items:center;min-height:48px;padding:var(--sp-3) var(--sp-6);border-bottom:1px solid var(--ink-100);font-size:var(--fs-base)}
+.ftr .link--disabled{font-size:var(--fs-sm);color:var(--ink-500)}

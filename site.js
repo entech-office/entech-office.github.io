@@ -86,18 +86,9 @@
       }
     },
     courses: {
-      ja: {
-        title: '講座｜会計エンテック事務所 — 会計業務の自動化を実務から学ぶ',
-        desc: '会計・財務業務を題材に、業務の分解からフロー設計、ツールでの実装までを扱う講座。初級・中級・上級の3段階、単堂講座と開講準備中のコースを掲載しています。'
-      },
-      zh: {
-        title: '課程｜会計エンテック事務所 — 從實務學會計流程自動化',
-        desc: '以會計財務業務為題材，從流程拆解、流程設計到工具實作的系列課程。分初級、中級、進階三級，收錄單堂課程與開課準備中的完整課程。'
-      },
-      en: {
-        title: 'Courses — Learn Accounting Automation from Real Practice | Entech Office',
-        desc: 'Courses built on real accounting and finance work: breaking down a process, designing the flow, then implementing it in a tool. Three levels, single-session classes and full courses in preparation.'
-      }
+      ja: { title: '講座は準備中｜会計エンテック事務所', desc: '会計エンテック事務所の講座は現在準備中です。' },
+      zh: { title: '課程準備中｜会計エンテック事務所', desc: '会計エンテック事務所的課程目前仍在準備中。' },
+      en: { title: 'Courses Coming Soon | Entech Office', desc: 'Courses at Entech Office are currently in preparation.' }
     },
     member: {
       ja: {

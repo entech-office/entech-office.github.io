@@ -60,7 +60,7 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "sales",
-        "email": "contact@entech-office.example",
+        "email": "accengineer2024@gmail.com",
         "availableLanguage": ["ja", "zh-Hant", "en"]
       },
       "hasOfferCatalog": {
@@ -156,7 +156,7 @@
     <nav class="nav" aria-label="メインナビゲーション">
       <a href="#services"><span class="t" data-l="ja">サービス</span><span class="t" data-l="zh">服務</span><span class="t" data-l="en">Services</span></a>
       <a href="#projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Work</span></a>
-      <a href="courses.html"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></a>
+      <span class="link--disabled" aria-disabled="true"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></span>
       <a href="#faq"><span class="t" data-l="ja">よくある質問</span><span class="t" data-l="zh">常見問題</span><span class="t" data-l="en">FAQ</span></a>
       <a href="#contact"><span class="t" data-l="ja">お問い合わせ</span><span class="t" data-l="zh">聯絡我們</span><span class="t" data-l="en">Contact</span></a>
     </nav>
@@ -190,7 +190,7 @@
     <ul>
       <li><a href="#services"><span class="t" data-l="ja">サービス</span><span class="t" data-l="zh">服務</span><span class="t" data-l="en">Services</span></a></li>
       <li><a href="#projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Work</span></a></li>
-      <li><a href="courses.html"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></a></li>
+      <li><span class="link--disabled" aria-disabled="true"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></span></li>
       <li><a href="#faq"><span class="t" data-l="ja">よくある質問</span><span class="t" data-l="zh">常見問題</span><span class="t" data-l="en">FAQ</span></a></li>
       <li><a href="#contact"><span class="t" data-l="ja">お問い合わせ</span><span class="t" data-l="zh">聯絡我們</span><span class="t" data-l="en">Contact</span></a></li>
       <li><span class="mnav__disabled" aria-disabled="true"><span class="t" data-l="ja">会員ログイン（準備中）</span><span class="t" data-l="zh">會員登入（準備中）</span><span class="t" data-l="en">Member sign-in (coming soon)</span></span></li>
@@ -225,9 +225,9 @@
             <span class="t" data-l="ja">自動化の相談をする</span><span class="t" data-l="zh">聊聊你的自動化需求</span><span class="t" data-l="en">Discuss your process</span>
             <span class="btn__arrow" aria-hidden="true">→</span>
           </a>
-          <a class="btn btn--ghost" href="courses.html">
-            <span class="t" data-l="ja">講座を見る</span><span class="t" data-l="zh">查看課程</span><span class="t" data-l="en">See the courses</span>
-          </a>
+          <button class="btn btn--ghost btn--disabled" type="button" disabled aria-label="講座は準備中です">
+            <span class="t" data-l="ja">講座（準備中）</span><span class="t" data-l="zh">課程（準備中）</span><span class="t" data-l="en">Courses (coming soon)</span>
+          </button>
         </div>
         <div class="hero__tools">
           <span>Power Automate</span><span>UiPath</span><span>Power BI</span><span>AI Agent</span>
@@ -393,53 +393,25 @@
     </div>
   </section>
 
-  <!-- ===== Courses teaser → courses.html ===== -->
+  <!-- ===== Courses (in preparation) ===== -->
   <section class="sec sec--tight sec--tint" id="courses" aria-labelledby="h-courses">
     <div class="wrap">
       <div class="sec-head">
         <p class="eyebrow">03 — Courses</p>
-        <h2 id="h-courses"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></h2>
+        <h2 id="h-courses"><span class="t" data-l="ja">講座は準備中です。</span><span class="t" data-l="zh">課程準備中。</span><span class="t" data-l="en">Courses are coming soon.</span></h2>
       </div>
-
       <div class="courses-teaser">
         <div>
-          <h3 style="font-size:var(--fs-lg);margin-bottom:var(--sp-3)">
-            <span class="t" data-l="ja">自動化のつくり方を、実務から学ぶ。</span>
-            <span class="t" data-l="zh">從實務出發，學會怎麼做自動化。</span>
-            <span class="t" data-l="en">Learn how automation is actually built.</span>
-          </h3>
           <p style="max-width:48ch;margin-bottom:var(--sp-4)">
-            <span class="t" data-l="ja">会計業務を題材に、業務の分解からフロー設計、ツールでの実装まで。初級・中級・上級の3段階で、単堂講座から開講予定のコースまでを用意しています。</span>
-            <span class="t" data-l="zh">以會計業務為題材，從流程拆解、流程設計到工具實作。分初級、中級、進階三級，從單堂課程到完整課程都在規劃中。</span>
-            <span class="t" data-l="en">Built on accounting work: breaking a process down, designing the flow, then implementing it in a tool. Three levels, from single-session classes up to full courses.</span>
+            <span class="t" data-l="ja">内容と提供方法を整えた上で公開します。開講時にはこのサイトでご案内します。</span>
+            <span class="t" data-l="zh">內容與提供方式準備完成後才會公開；開放時會在此網站公告。</span>
+            <span class="t" data-l="en">We will publish course information once its content and delivery format are ready.</span>
           </p>
-          <div class="hero__cta" style="margin-top:0">
-            <a class="btn" href="courses.html">
-              <span class="t" data-l="ja">講座一覧を見る</span><span class="t" data-l="zh">查看課程列表</span><span class="t" data-l="en">Browse all courses</span>
-              <span class="btn__arrow" aria-hidden="true">→</span>
-            </a>
-          </div>
+          <button class="btn btn--disabled" type="button" disabled aria-label="講座は準備中です">
+            <span class="t" data-l="ja">公開準備中</span><span class="t" data-l="zh">公開準備中</span><span class="t" data-l="en">In preparation</span>
+          </button>
         </div>
-
-        <div>
-          <div class="ct-stats">
-            <div class="ct-stat">
-              <b>3</b>
-              <span><span class="t" data-l="ja">レベル</span><span class="t" data-l="zh">程度分級</span><span class="t" data-l="en">Levels</span></span>
-            </div>
-            <div class="ct-stat">
-              <b>6</b>
-              <span><span class="t" data-l="ja">単堂講座</span><span class="t" data-l="zh">單堂課程</span><span class="t" data-l="en">Classes</span></span>
-            </div>
-            <div class="ct-stat">
-              <b>2</b>
-              <span><span class="t" data-l="ja">開講準備中</span><span class="t" data-l="zh">開課準備中</span><span class="t" data-l="en">In prep</span></span>
-            </div>
-          </div>
-          <div class="anno-l" style="margin-top:var(--sp-4)">
-            <span class="src src--proto"><span class="t" data-l="ja">受講には会員登録が必要（予定）</span><span class="t" data-l="zh">修課需註冊會員（預定）</span><span class="t" data-l="en">Membership required (planned)</span></span>
-          </div>
-        </div>
+        <div><span class="src src--proto"><span class="t" data-l="ja">現在、公開できる講座はありません</span><span class="t" data-l="zh">目前尚無可公開的課程</span><span class="t" data-l="en">No courses are published yet</span></span></div>
       </div>
     </div>
   </section>
@@ -521,7 +493,7 @@
         <dl class="contact__meta">
           <div>
             <dt>Email</dt>
-            <dd>contact@entech-office.example</dd>
+            <dd>accengineer2024@gmail.com</dd>
           </div>
           <div>
             <dt><span class="t" data-l="ja">対応時間</span><span class="t" data-l="zh">服務時間</span><span class="t" data-l="en">Hours</span></dt>
@@ -602,7 +574,7 @@
         <ul>
           <li><a href="#services"><span class="t" data-l="ja">サービス</span><span class="t" data-l="zh">服務</span><span class="t" data-l="en">Services</span></a></li>
           <li><a href="#projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Work</span></a></li>
-          <li><a href="courses.html"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></a></li>
+          <li><span class="link--disabled" aria-disabled="true"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></span></li>
           <li><a href="#faq"><span class="t" data-l="ja">よくある質問</span><span class="t" data-l="zh">常見問題</span><span class="t" data-l="en">FAQ</span></a></li>
         </ul>
       </div>
@@ -611,7 +583,7 @@
         <ul>
           <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram — 會計工程師</a></li>
           <li><a href="#contact"><span class="t" data-l="ja">お問い合わせ</span><span class="t" data-l="zh">聯絡我們</span><span class="t" data-l="en">Contact</span></a></li>
-          <li><a href="mailto:contact@entech-office.example">contact@entech-office.example</a></li>
+          <li><a href="mailto:accengineer2024@gmail.com">accengineer2024@gmail.com</a></li>
         </ul>
       </div>
       <div style="display:flex;align-items:flex-start;justify-content:flex-start">
