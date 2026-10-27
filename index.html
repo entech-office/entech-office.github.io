@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="ja" data-lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>会計エンテック事務所｜会計・財務業務の自動化とDX設計</title>
+<meta name="description" content="会計エンテック事務所は、記帳・請求・経費・月次レポートなど会計財務業務の自動化を設計する事務所です。Power Automate・UiPath・AIエージェント・Power BI を用い、会計領域に限らず業務プロセスの自動化を設計・実装します。">
+<meta name="keywords" content="会計自動化, 業務自動化, Power Automate, UiPath, Power BI, AIエージェント, DX, 会計エンテック事務所">
+<meta name="author" content="会計エンテック事務所">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#161A1D">
+<link rel="canonical" href="https://entech-office.example/">
+<link rel="alternate" hreflang="ja" href="https://entech-office.example/">
+<link rel="alternate" hreflang="zh-Hant" href="https://entech-office.example/zh-tw/">
+<link rel="alternate" hreflang="en" href="https://entech-office.example/en/">
+<link rel="alternate" hreflang="x-default" href="https://entech-office.example/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<!-- OGP: og:image（1200×630）は素材支給後に追加 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="会計エンテック事務所">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:locale:alternate" content="zh_TW">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:title" content="会計エンテック事務所｜会計・財務業務の自動化とDX設計">
+<meta property="og:description" content="記帳・請求・経費・月次レポート。くり返される会計業務を、仕組みにする。会計の実務を知るエンジニアが設計する自動化事務所です。">
+<meta property="og:url" content="https://entech-office.example/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="会計エンテック事務所｜会計・財務業務の自動化とDX設計">
+<meta name="twitter:description" content="会計の実務を知るエンジニアが、業務プロセスの自動化を設計します。">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=1.3">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": ["ProfessionalService", "AccountingService"],
+      "@id": "https://entech-office.example/#organization",
+      "name": "会計エンテック事務所",
+      "alternateName": ["會計工程師", "Entech Office"],
+      "url": "https://entech-office.example/",
+      "logo": "https://entech-office.example/logos/logo-lockup-primary.svg",
+      "image": "https://entech-office.example/logos/logo-lockup-primary.svg",
+      "description": "会計・財務業務の自動化とデジタル転換（DX）を設計する事務所。Power Automate・UiPath・AIエージェント・Power BI を用い、会計領域に限らず業務プロセスの自動化を設計・実装する。",
+      "slogan": "会計のしごとを、仕組みにする。",
+      "areaServed": { "@type": "Country", "name": "Japan" },
+      "knowsAbout": [
+        "会計業務の自動化",
+        "財務プロセス設計",
+        "業務プロセス自動化（RPA）",
+        "AIエージェント",
+        "データ分析",
+        "デジタル転換"
+      ],
+      "sameAs": ["https://www.instagram.com/"],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "contact@entech-office.example",
+        "availableLanguage": ["ja", "zh-Hant", "en"]
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "サービス",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "業務プロセス自動化", "description": "Power Automate・UiPath などを用いた請求書処理・仕訳入力・経費精算・月次レポートの自動化。" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "デジタル転換（DX）設計", "description": "現状業務の棚卸しから、あるべきフローとシステム構成の設計。" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AIエージェント導入", "description": "照合・確認・一次対応などの判断業務をAIエージェントのワークフローとして実装。" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "データ分析・可視化", "description": "Power BI などによる会計データのダッシュボード化と月次締めの見える化。" } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://entech-office.example/#website",
+      "url": "https://entech-office.example/",
+      "name": "会計エンテック事務所",
+      "inLanguage": "ja",
+      "publisher": { "@id": "https://entech-office.example/#organization" }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://entech-office.example/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "会計以外の業務プロセスも自動化できますか。",
+          "acceptedAnswer": { "@type": "Answer", "text": "はい。会計財務領域を主軸にしていますが、受発注・人事・情報共有など他部門の業務プロセス自動化も承ります。現状フローの棚卸しから設計します。" }
+        },
+        {
+          "@type": "Question",
+          "name": "特定のツールを前提にした相談はできますか。",
+          "acceptedAnswer": { "@type": "Answer", "text": "Power Automate、UiPath など既存ツールがある場合はそれを前提に設計します。ツールに縛られず、業務と予算に合わせて構成を選定します。" }
+        },
+        {
+          "@type": "Question",
+          "name": "小規模な自動化から相談できますか。",
+          "acceptedAnswer": { "@type": "Answer", "text": "単一の定型作業の自動化からご相談いただけます。まずは対象業務と頻度、現状の手順をお知らせください。" }
+        },
+        {
+          "@type": "Question",
+          "name": "講座はいつ公開されますか。",
+          "acceptedAnswer": { "@type": "Answer", "text": "現在準備中です。公開時期とプラットフォームが確定次第、本ページとInstagramにてご案内します。" }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body data-page="home">
+
+<a class="skip" href="#main"><span class="t" data-l="ja">本文へスキップ</span><span class="t" data-l="zh">跳至主要內容</span><span class="t" data-l="en">Skip to content</span></a>
+
+<!-- ===== SVG symbols ===== -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- 枠（わく）— the decided mark. Frame = currentColor, square = --square-500.
+       Frame and square must NEVER share one colour: at 16px the all-one-colour
+       version measures 0% legible against paper and disappears entirely. -->
+  <symbol id="mark" viewBox="0 0 32 32">
+    <path d="M27 17V5H5V27H17" fill="none" stroke="currentColor" stroke-width="2.8"/>
+    <rect x="17" y="17" width="10" height="10" fill="var(--square-500)"/>
+  </symbol>
+  <symbol id="ig" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.5">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/>
+    </g>
+  </symbol>
+  <symbol id="user" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+      <circle cx="12" cy="8" r="3.6"/>
+      <path d="M4.8 20.2c0-3.6 3.2-5.8 7.2-5.8s7.2 2.2 7.2 5.8"/>
+    </g>
+  </symbol>
+  <symbol id="menu" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+      <path d="M3 7h18"/><path d="M3 12h18"/><path d="M3 17h18"/>
+    </g>
+  </symbol>
+</svg>
+
+<!-- ===== Header ===== -->
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="brand" href="index.html" aria-label="会計エンテック事務所 ホーム">
+      <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span class="brand__txt">会計エンテック事務所</span>
+    </a>
+
+    <nav class="nav" aria-label="メインナビゲーション">
+      <a href="#services"><span class="t" data-l="ja">サービス</span><span class="t" data-l="zh">服務</span><span class="t" data-l="en">Services</span></a>
+      <a href="#projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Work</span></a>
+      <a href="courses.html"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></a>
+      <a href="#faq"><span class="t" data-l="ja">よくある質問</span><span class="t" data-l="zh">常見問題</span><span class="t" data-l="en">FAQ</span></a>
+      <a href="#contact"><span class="t" data-l="ja">お問い合わせ</span><span class="t" data-l="zh">聯絡我們</span><span class="t" data-l="en">Contact</span></a>
+    </nav>
+
+    <div class="hdr__right">
+      <div class="lang" role="group" aria-label="言語 / 語言 / Language">
+        <button type="button" data-set-lang="ja" aria-pressed="true" lang="ja">JA</button>
+        <button type="button" data-set-lang="zh" aria-pressed="false" lang="zh-Hant">繁中</button>
+        <button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+
+      <!-- Member area: signed-out = sign in link, signed-in = account chip -->
+      <div class="mbr">
+        <a class="mbr__login" href="member.html#login" data-mbr-out>
+          <svg aria-hidden="true"><use href="#user"/></svg>
+          <span><span class="t" data-l="ja">ログイン</span><span class="t" data-l="zh">登入</span><span class="t" data-l="en">Sign in</span></span>
+        </a>
+        <a class="mbr__user" href="member.html#center" data-mbr-in hidden>
+          <span class="mbr__ava" aria-hidden="true">KE</span>
+          <span><span class="t" data-l="ja">マイページ</span><span class="t" data-l="zh">會員中心</span><span class="t" data-l="en">My page</span></span>
+        </a>
+      </div>
+
+      <a class="btn btn--sm" href="#contact" style="display:none" data-desktop-cta>
+        <span class="t" data-l="ja">相談する</span><span class="t" data-l="zh">預約諮詢</span><span class="t" data-l="en">Talk to us</span>
+        <span class="btn__arrow" aria-hidden="true">→</span>
+      </a>
+
+      <button class="mnav-btn" type="button" data-mnav-toggle aria-expanded="false" aria-controls="mnav">
+        <svg aria-hidden="true"><use href="#menu"/></svg>
+        <span class="t" data-l="ja">メニュー</span><span class="t" data-l="zh">選單</span><span class="t" data-l="en">Menu</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile navigation -->
+  <div class="mnav" id="mnav" data-mnav data-open="0">
+    <ul>
+      <li><a href="#services"><span class="t" data-l="ja">サービス</span><span class="t" data-l="zh">服務</span><span class="t" data-l="en">Services</span></a></li>
+      <li><a href="#projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Work</span></a></li>
+      <li><a href="courses.html"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></a></li>
+      <li><a href="#faq"><span class="t" data-l="ja">よくある質問</span><span class="t" data-l="zh">常見問題</span><span class="t" data-l="en">FAQ</span></a></li>
+      <li><a href="#contact"><span class="t" data-l="ja">お問い合わせ</span><span class="t" data-l="zh">聯絡我們</span><span class="t" data-l="en">Contact</span></a></li>
+      <li><a href="member.html"><span class="t" data-l="ja">会員ログイン</span><span class="t" data-l="zh">會員登入</span><span class="t" data-l="en">Member sign-in</span></a></li>
+    </ul>
+    <div class="mnav__ft">
+      <a class="btn btn--block" href="#contact">
+        <span class="t" data-l="ja">相談する</span><span class="t" data-l="zh">預約諮詢</span><span class="t" data-l="en">Talk to us</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div>
+        <p class="eyebrow">Accounting × Engineering</p>
+        <h1>
+          <span class="t" data-l="ja">会計・財務の自動化を、<br><span class="u">仕組み</span>にする。</span>
+          <span class="t" data-l="zh">把會計財務的自動化，<br>變成<span class="u">一套機制</span>。</span>
+          <span class="t" data-l="en">We turn accounting into<br><span class="u">a system</span>, not a routine.</span>
+        </h1>
+        <p class="hero__lead">
+          <span class="t" data-l="ja">記帳・請求・経費・月次レポート。毎月くり返される会計財務の業務を、Power Automate・UiPath・AIエージェントで静かに自動化します。会計の実務を知るエンジニアが、ツールに縛られずフローから設計します。</span>
+          <span class="t" data-l="zh">記帳、請款、費用、月結報表——每月重複的會計財務作業，用 Power Automate、UiPath、AI Agent 安靜地自動化。由懂會計實務的工程師操刀，不被工具綁死，從流程本身開始設計。</span>
+          <span class="t" data-l="en">Bookkeeping, invoicing, expenses, monthly close. The accounting work that repeats every month, automated quietly with Power Automate, UiPath and AI agents. Designed by engineers who have done the accounting — starting from the process, not the tool.</span>
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#contact">
+            <span class="t" data-l="ja">自動化の相談をする</span><span class="t" data-l="zh">聊聊你的自動化需求</span><span class="t" data-l="en">Discuss your process</span>
+            <span class="btn__arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="btn btn--ghost" href="courses.html">
+            <span class="t" data-l="ja">講座を見る</span><span class="t" data-l="zh">查看課程</span><span class="t" data-l="en">See the courses</span>
+          </a>
+        </div>
+        <div class="hero__tools">
+          <span>Power Automate</span><span>UiPath</span><span>Power BI</span><span>AI Agent</span>
+        </div>
+      </div>
+
+      <div class="panel" role="img" aria-label="月次締めフローの例 / Monthly close flow sample / 月結流程範例">
+        <div class="panel__hd">
+          <b><span class="t" data-l="ja">月次締めフロー</span><span class="t" data-l="zh">月結流程</span><span class="t" data-l="en">Monthly close flow</span></b>
+          <i>sample</i>
+        </div>
+        <div class="flow">
+          <div class="flow__row">
+            <span class="flow__n">01</span>
+            <span>
+              <span class="flow__lb"><span class="t" data-l="ja">請求書の受領・読み取り</span><span class="t" data-l="zh">請款單收件與辨識</span><span class="t" data-l="en">Invoice intake &amp; OCR</span></span>
+              <span class="flow__bar"><i style="--w:92%"></i></span>
+            </span>
+            <span class="flow__tag">auto</span>
+          </div>
+          <div class="flow__row">
+            <span class="flow__n">02</span>
+            <span>
+              <span class="flow__lb"><span class="t" data-l="ja">仕訳の起票・会計ソフト連携</span><span class="t" data-l="zh">傳票開立與系統拋轉</span><span class="t" data-l="en">Journal entry &amp; posting</span></span>
+              <span class="flow__bar"><i style="--w:86%"></i></span>
+            </span>
+            <span class="flow__tag">auto</span>
+          </div>
+          <div class="flow__row">
+            <span class="flow__n">03</span>
+            <span>
+              <span class="flow__lb"><span class="t" data-l="ja">突合・差異の確認</span><span class="t" data-l="zh">對帳與差異確認</span><span class="t" data-l="en">Reconciliation &amp; exceptions</span></span>
+              <span class="flow__bar"><i style="--w:64%"></i></span>
+            </span>
+            <span class="flow__tag flow__tag--ai">ai</span>
+          </div>
+          <div class="flow__row">
+            <span class="flow__n">04</span>
+            <span>
+              <span class="flow__lb"><span class="t" data-l="ja">月次レポートの生成</span><span class="t" data-l="zh">月結報表產出</span><span class="t" data-l="en">Monthly report output</span></span>
+              <span class="flow__bar"><i style="--w:95%"></i></span>
+            </span>
+            <span class="flow__tag">auto</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section class="sec" id="services" aria-labelledby="h-services">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">01 — Services</p>
+        <h2 id="h-services"><span class="t" data-l="ja">業務を、ツールではなく<br>フローから設計する。</span><span class="t" data-l="zh">從流程開始設計，<br>而不是從工具開始。</span><span class="t" data-l="en">Design from the process,<br>not from the tool.</span></h2>
+        <p><span class="t" data-l="ja">会計財務領域を主軸に、隣接する業務プロセスまで。既存ツールがある場合はそれを活かし、ない場合は業務と予算に合わせて構成を選びます。</span><span class="t" data-l="zh">以會計財務領域為主軸，延伸到相鄰的業務流程。已有工具就沿用，沒有就依業務與預算選擇最合適的組合。</span><span class="t" data-l="en">Accounting and finance first, then the processes next to it. If you already run a tool we build around it; if not, we pick the stack that fits the work and the budget.</span></p>
+      </div>
+
+      <div class="svc">
+        <article class="svc__row">
+          <p class="svc__no">01</p>
+          <div class="svc__body">
+            <h3><span class="t" data-l="ja">業務プロセス自動化</span><span class="t" data-l="zh">業務流程自動化</span><span class="t" data-l="en">Process automation</span></h3>
+            <p><span class="t" data-l="ja">請求書処理、仕訳入力、経費精算、月次レポートの組み立て。手作業でつないでいる工程を特定し、RPA とクラウド連携で置き換えます。</span><span class="t" data-l="zh">請款單處理、傳票輸入、費用報支、月結報表組裝。找出靠人工串接的環節，用 RPA 與雲端整合取代。</span><span class="t" data-l="en">Invoice processing, journal entry, expense claims, monthly report assembly. We find the steps held together by hand and replace them with RPA and cloud integration.</span></p>
+            <ul class="tags">
+              <li class="tag">Power Automate</li><li class="tag">UiPath</li><li class="tag">Excel / VBA</li><li class="tag">API 連携</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="svc__row">
+          <p class="svc__no">02</p>
+          <div class="svc__body">
+            <h3><span class="t" data-l="ja">デジタル転換（DX）設計</span><span class="t" data-l="zh">數位轉型（DX）方案設計</span><span class="t" data-l="en">Digital transformation design</span></h3>
+            <p><span class="t" data-l="ja">現状業務の棚卸しから、あるべきフローとシステム構成を設計。ツール導入ありきではなく、業務そのものを組み直します。</span><span class="t" data-l="zh">從現行作業盤點開始，設計應有的流程與系統架構。不是先買工具，而是把業務本身重新組裝。</span><span class="t" data-l="en">We map how the work actually runs today, then design the flow and system it should have. Not a tool rollout — the work itself, re-assembled.</span></p>
+            <ul class="tags">
+              <li class="tag"><span class="t" data-l="ja">業務棚卸し</span><span class="t" data-l="zh">流程盤點</span><span class="t" data-l="en">Process audit</span></li>
+              <li class="tag">To-Be 設計</li>
+              <li class="tag"><span class="t" data-l="ja">ツール選定</span><span class="t" data-l="zh">工具選型</span><span class="t" data-l="en">Tool selection</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="svc__row">
+          <p class="svc__no">03</p>
+          <div class="svc__body">
+            <h3><span class="t" data-l="ja">AIエージェント</span><span class="t" data-l="zh">AI Agent 流程</span><span class="t" data-l="en">AI agent workflows</span></h3>
+            <p><span class="t" data-l="ja">照合、確認、一次対応など「判断が要る定型作業」を、AIエージェントのワークフローとして実装。人が見るべき点だけを人に残します。</span><span class="t" data-l="zh">對帳、確認、初階回覆這類「需要判斷的定型作業」，實作為 AI Agent 的工作流程。只把真正需要人看的部分留給人。</span><span class="t" data-l="en">Matching, checking, first-line replies — repetitive work that still needs judgement — implemented as an agent workflow. Only the parts that genuinely need a person stay with a person.</span></p>
+            <ul class="tags">
+              <li class="tag">LLM / Agent</li><li class="tag">OCR</li>
+              <li class="tag"><span class="t" data-l="ja">承認フロー</span><span class="t" data-l="zh">簽核流程</span><span class="t" data-l="en">Approval flow</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="svc__row">
+          <p class="svc__no">04</p>
+          <div class="svc__body">
+            <h3><span class="t" data-l="ja">データ分析・可視化</span><span class="t" data-l="zh">數據分析與視覺化</span><span class="t" data-l="en">Data analysis &amp; reporting</span></h3>
+            <p><span class="t" data-l="ja">会計データを、意思決定に使えるダッシュボードへ。月次締めの進捗、部門別のコスト、キャッシュの見通しを一画面に。</span><span class="t" data-l="zh">把會計數據變成能支持決策的儀表板。月結進度、各部門成本、現金流預測，收在同一畫面。</span><span class="t" data-l="en">Accounting data turned into a dashboard you can decide with: close progress, cost by department, cash outlook — on one screen.</span></p>
+            <ul class="tags">
+              <li class="tag">Power BI</li>
+              <li class="tag"><span class="t" data-l="ja">データモデル設計</span><span class="t" data-l="zh">資料模型設計</span><span class="t" data-l="en">Data modelling</span></li>
+              <li class="tag">KPI 設計</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section class="sec" id="projects" aria-labelledby="h-projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">02 — Selected Work</p>
+        <h2 id="h-projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Selected work</span></h2>
+        <p><span class="t" data-l="ja">守秘義務の範囲で公開できる事例を、順次掲載します。以下は公開準備中の枠です。</span><span class="t" data-l="zh">在保密義務範圍內可公開的案例將陸續上架，以下為公開前的預留版位。</span><span class="t" data-l="en">Case studies are published as confidentiality allows. The slots below are reserved until disclosure is cleared.</span></p>
+      </div>
+
+      <article class="feat">
+        <div class="feat__txt">
+          <span class="badge-prep"><span class="t" data-l="ja">公開準備中</span><span class="t" data-l="zh">準備上架</span><span class="t" data-l="en">Coming soon</span></span>
+          <h3><span class="t" data-l="ja">会計財務・月次締めプロセスの自動化</span><span class="t" data-l="zh">會計財務・月結流程自動化</span><span class="t" data-l="en">Accounting &amp; monthly close automation</span></h3>
+          <p><span class="t" data-l="ja">請求書の受領から仕訳起票、突合、レポート生成までを一連のフローとして再設計。対象業務・削減工数・使用ツールの詳細は、掲載許可を得たうえで公開します。</span><span class="t" data-l="zh">從請款單收件、傳票開立、對帳到報表產出，重新設計為一條完整流程。具體範圍、節省工時與使用工具，待取得揭露許可後公開。</span><span class="t" data-l="en">Redesigned as one flow: invoice intake, journal entry, reconciliation, report generation. Scope, hours saved and tooling will be published once disclosure is cleared.</span></p>
+          <div class="tags" style="margin-top:var(--sp-6)">
+            <span class="tag"><span class="t" data-l="ja">領域</span><span class="t" data-l="zh">領域</span><span class="t" data-l="en">Domain</span> · <span class="t" data-l="ja">会計</span><span class="t" data-l="zh">會計</span><span class="t" data-l="en">Accounting</span></span>
+            <span class="tag">Power Automate</span>
+            <span class="tag"><span class="t" data-l="ja">工数削減</span><span class="t" data-l="zh">工時節省</span><span class="t" data-l="en">Hours saved</span> — <span class="t" data-l="ja">要確認</span><span class="t" data-l="zh">待確認</span><span class="t" data-l="en">TBC</span></span>
+          </div>
+        </div>
+        <div class="feat__vis" aria-hidden="true">
+          <div class="ledger">
+            <div class="ledger__hd"><span>flow</span><span>status</span></div>
+            <div class="ledger__ln"><i></i><i></i></div>
+            <div class="ledger__ln"><i></i><i></i></div>
+            <div class="ledger__ln ledger__ln--ai"><i></i><i></i></div>
+            <div class="ledger__ln"><i></i><i></i></div>
+            <div class="ledger__ln"><i></i><i></i></div>
+            <div class="ledger__ln"><i></i><i></i></div>
+          </div>
+        </div>
+      </article>
+
+      <div class="cards">
+        <article class="card">
+          <span class="badge-prep"><span class="t" data-l="ja">公開準備中</span><span class="t" data-l="zh">準備上架</span><span class="t" data-l="en">Coming soon</span></span>
+          <h3><span class="t" data-l="ja">経費精算フローの自動化</span><span class="t" data-l="zh">費用報支流程自動化</span><span class="t" data-l="en">Expense claim automation</span></h3>
+          <p><span class="t" data-l="ja">申請・承認・仕訳連携までの一連の流れを標準化。承認待ちの滞留を見える化します。</span><span class="t" data-l="zh">從申請、簽核到傳票拋轉整段流程標準化，讓卡在簽核的件數可視化。</span><span class="t" data-l="en">Request, approval and posting standardised into one path, with pending approvals made visible.</span></p>
+          <div class="card__ft">
+            <span class="note"><span class="t" data-l="ja">詳細は準備中</span><span class="t" data-l="zh">細節準備中</span><span class="t" data-l="en">Details pending</span></span>
+          </div>
+        </article>
+        <article class="card">
+          <span class="badge-prep"><span class="t" data-l="ja">公開準備中</span><span class="t" data-l="zh">準備上架</span><span class="t" data-l="en">Coming soon</span></span>
+          <h3><span class="t" data-l="ja">受発注データの突合自動化</span><span class="t" data-l="zh">進銷存資料對帳自動化</span><span class="t" data-l="en">Order-to-payment reconciliation</span></h3>
+          <p><span class="t" data-l="ja">複数システム間の受注・請求・入金データを突合し、差異だけを人に渡す仕組み。</span><span class="t" data-l="zh">跨系統比對訂單、請款與收款資料，只把差異項目交回給人處理。</span><span class="t" data-l="en">Matches orders, invoices and receipts across systems, and hands back only the exceptions.</span></p>
+          <div class="card__ft">
+            <span class="note"><span class="t" data-l="ja">詳細は準備中</span><span class="t" data-l="zh">細節準備中</span><span class="t" data-l="en">Details pending</span></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Courses teaser → courses.html ===== -->
+  <section class="sec sec--tight sec--tint" id="courses" aria-labelledby="h-courses">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">03 — Courses</p>
+        <h2 id="h-courses"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></h2>
+      </div>
+
+      <div class="courses-teaser">
+        <div>
+          <h3 style="font-size:var(--fs-lg);margin-bottom:var(--sp-3)">
+            <span class="t" data-l="ja">自動化のつくり方を、実務から学ぶ。</span>
+            <span class="t" data-l="zh">從實務出發，學會怎麼做自動化。</span>
+            <span class="t" data-l="en">Learn how automation is actually built.</span>
+          </h3>
+          <p style="max-width:48ch;margin-bottom:var(--sp-4)">
+            <span class="t" data-l="ja">会計業務を題材に、業務の分解からフロー設計、ツールでの実装まで。初級・中級・上級の3段階で、単堂講座から開講予定のコースまでを用意しています。</span>
+            <span class="t" data-l="zh">以會計業務為題材，從流程拆解、流程設計到工具實作。分初級、中級、進階三級，從單堂課程到完整課程都在規劃中。</span>
+            <span class="t" data-l="en">Built on accounting work: breaking a process down, designing the flow, then implementing it in a tool. Three levels, from single-session classes up to full courses.</span>
+          </p>
+          <div class="hero__cta" style="margin-top:0">
+            <a class="btn" href="courses.html">
+              <span class="t" data-l="ja">講座一覧を見る</span><span class="t" data-l="zh">查看課程列表</span><span class="t" data-l="en">Browse all courses</span>
+              <span class="btn__arrow" aria-hidden="true">→</span>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="ct-stats">
+            <div class="ct-stat">
+              <b>3</b>
+              <span><span class="t" data-l="ja">レベル</span><span class="t" data-l="zh">程度分級</span><span class="t" data-l="en">Levels</span></span>
+            </div>
+            <div class="ct-stat">
+              <b>6</b>
+              <span><span class="t" data-l="ja">単堂講座</span><span class="t" data-l="zh">單堂課程</span><span class="t" data-l="en">Classes</span></span>
+            </div>
+            <div class="ct-stat">
+              <b>2</b>
+              <span><span class="t" data-l="ja">開講準備中</span><span class="t" data-l="zh">開課準備中</span><span class="t" data-l="en">In prep</span></span>
+            </div>
+          </div>
+          <div class="anno-l" style="margin-top:var(--sp-4)">
+            <span class="src src--proto"><span class="t" data-l="ja">受講には会員登録が必要（予定）</span><span class="t" data-l="zh">修課需註冊會員（預定）</span><span class="t" data-l="en">Membership required (planned)</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="sec sec--tight" id="faq" aria-labelledby="h-faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">04 — FAQ</p>
+        <h2 id="h-faq"><span class="t" data-l="ja">よくある質問</span><span class="t" data-l="zh">常見問題</span><span class="t" data-l="en">Frequently asked</span></h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary><span class="t" data-l="ja">会計以外の業務プロセスも自動化できますか。</span><span class="t" data-l="zh">會計以外的流程也能自動化嗎？</span><span class="t" data-l="en">Can you automate processes outside accounting?</span></summary>
+          <p><span class="t" data-l="ja">はい。会計財務領域を主軸にしていますが、受発注・人事・情報共有など他部門の業務プロセス自動化も承ります。現状フローの棚卸しから設計します。</span><span class="t" data-l="zh">可以。我們以會計財務為主軸，也承接進銷存、人資、資訊分享等其他部門的流程自動化，並從現行流程盤點開始設計。</span><span class="t" data-l="en">Yes. Accounting and finance is the core, but we also take on order management, HR and internal information flows. We start by mapping how the process runs today.</span></p>
+        </details>
+        <details>
+          <summary><span class="t" data-l="ja">特定のツールを前提にした相談はできますか。</span><span class="t" data-l="zh">可以指定既有工具來談嗎？</span><span class="t" data-l="en">Can we start from a tool we already use?</span></summary>
+          <p><span class="t" data-l="ja">Power Automate、UiPath など既存ツールがある場合はそれを前提に設計します。ツールに縛られず、業務と予算に合わせて構成を選定します。</span><span class="t" data-l="zh">若已有 Power Automate、UiPath 等工具，會以既有環境為前提設計；我們不被特定工具綁定，會依業務與預算選擇組合。</span><span class="t" data-l="en">If you already run Power Automate or UiPath, we design around it. We are not tied to a vendor and will choose the combination that fits the work and the budget.</span></p>
+        </details>
+        <details>
+          <summary><span class="t" data-l="ja">小規模な自動化から相談できますか。</span><span class="t" data-l="zh">可以只做小規模的自動化嗎？</span><span class="t" data-l="en">Can we start with something small?</span></summary>
+          <p><span class="t" data-l="ja">単一の定型作業の自動化からご相談いただけます。まずは対象業務と頻度、現状の手順をお知らせください。</span><span class="t" data-l="zh">可以，從單一定型作業的自動化開始談。請先告訴我們對象作業、發生頻率與目前的做法。</span><span class="t" data-l="en">Yes — a single repetitive task is a fine starting point. Tell us the task, how often it runs and how it is done today.</span></p>
+        </details>
+        <details>
+          <summary><span class="t" data-l="ja">講座はいつ公開されますか。</span><span class="t" data-l="zh">課程什麼時候上線？</span><span class="t" data-l="en">When do the courses go live?</span></summary>
+          <p><span class="t" data-l="ja">現在準備中です。公開時期とプラットフォームが確定次第、本ページと Instagram にてご案内します。</span><span class="t" data-l="zh">目前籌備中。時間與平台上架方式確定後，會在本頁與 Instagram 公告。</span><span class="t" data-l="en">In preparation. We will announce the dates and platform here and on Instagram as soon as they are fixed.</span></p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Instagram ===== -->
+  <section class="sec sec--dark" aria-labelledby="h-ig">
+    <div class="wrap ig">
+      <div>
+        <p class="eyebrow" style="color:var(--ink-500)">05 — Instagram</p>
+        <h2 id="h-ig" style="margin-top:var(--sp-4)">
+          <span class="t" data-l="ja">日々の自動化を、<br>会計エンジニアが発信中。</span>
+          <span class="t" data-l="zh">日常的自動化，<br>由會計工程師持續分享。</span>
+          <span class="t" data-l="en">Everyday automation,<br>posted by an accounting engineer.</span>
+        </h2>
+        <p style="margin-top:var(--sp-6)"><span class="t" data-l="ja">Power Automate の小ネタ、会計業務のムダ取り、実際に組んだフローの話。講座より軽い温度で更新しています。</span><span class="t" data-l="zh">Power Automate 小技巧、會計流程的浪費排查、實際組過的流程。比課程更輕鬆的頻率在更新。</span><span class="t" data-l="en">Small Power Automate tips, waste found in accounting workflows, flows actually built. Lighter and more frequent than the courses.</span></p>
+      </div>
+      <div class="ig__card">
+        <div class="ig__row">
+          <span class="ig__avatar" aria-hidden="true"><svg width="20" height="20"><use href="#ig"/></svg></span>
+          <span>
+            <span class="ig__name"><span class="t" data-l="ja">會計工程師</span><span class="t" data-l="zh">會計工程師</span><span class="t" data-l="en">會計工程師 (Accounting Engineer)</span></span><br>
+            <span class="ig__handle">Instagram</span>
+          </span>
+        </div>
+        <p style="font-size:var(--fs-sm);color:var(--ink-400)">
+          <span class="t" data-l="ja">フォローすると、新しいフローの組み方や検証結果が流れてきます。</span>
+          <span class="t" data-l="zh">追蹤後會看到新的流程組法與實測結果。</span>
+          <span class="t" data-l="en">Follow to see new flow patterns and how they tested out.</span>
+        </p>
+        <a class="btn btn--light" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <span class="t" data-l="ja">Instagram を見る</span><span class="t" data-l="zh">前往 Instagram</span><span class="t" data-l="en">Open Instagram</span>
+          <span class="btn__arrow" aria-hidden="true">↗</span>
+        </a>
+        <span class="note"><span class="t" data-l="ja">アカウント URL は確定後に差し替え</span><span class="t" data-l="zh">帳號網址待確定後替換</span><span class="t" data-l="en">Account URL to be confirmed</span></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section class="sec" id="contact" aria-labelledby="h-contact">
+    <div class="wrap contact">
+      <div>
+        <p class="eyebrow">06 — Contact</p>
+        <h2 id="h-contact" style="font-size:var(--fs-2xl);margin-top:var(--sp-4)">
+          <span class="t" data-l="ja">まずは、<br>対象業務を教えてください。</span>
+          <span class="t" data-l="zh">先告訴我們，<br>你想自動化哪一段。</span>
+          <span class="t" data-l="en">Start by telling us<br>which process hurts.</span>
+        </h2>
+        <p style="margin-top:var(--sp-4);max-width:34ch"><span class="t" data-l="ja">「毎月この作業に丸 2 日かかっている」——その一言から設計は始まります。ヒアリングは 30 分ほどです。</span><span class="t" data-l="zh">「每個月這件工作要花兩天」——設計就是從這句話開始。訪談約 30 分鐘。</span><span class="t" data-l="en">"This one task eats two days every month." That sentence is where the design starts. The first conversation takes about 30 minutes.</span></p>
+
+        <dl class="contact__meta">
+          <div>
+            <dt>Email</dt>
+            <dd>contact@entech-office.example</dd>
+          </div>
+          <div>
+            <dt><span class="t" data-l="ja">対応時間</span><span class="t" data-l="zh">服務時間</span><span class="t" data-l="en">Hours</span></dt>
+            <dd><span class="t" data-l="ja">平日 10:00–18:00（JST）</span><span class="t" data-l="zh">平日 10:00–18:00（JST）</span><span class="t" data-l="en">Weekdays 10:00–18:00 (JST)</span></dd>
+          </div>
+          <div>
+            <dt><span class="t" data-l="ja">返信</span><span class="t" data-l="zh">回覆時間</span><span class="t" data-l="en">Response</span></dt>
+            <dd><span class="t" data-l="ja">2 営業日以内</span><span class="t" data-l="zh">2 個工作天內</span><span class="t" data-l="en">Within 2 business days</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <form id="contact-form" data-proto-form novalidate>
+        <div class="field">
+          <label for="f-co"><span class="t" data-l="ja">会社名・屋号</span><span class="t" data-l="zh">公司名稱</span><span class="t" data-l="en">Company</span></label>
+          <input id="f-co" name="company" type="text" autocomplete="organization" data-ph-ja="株式会社〇〇" data-ph-zh="〇〇股份有限公司" data-ph-en="Acme Inc." placeholder="株式会社〇〇">
+        </div>
+        <div class="field">
+          <label for="f-nm"><span class="t" data-l="ja">お名前</span><span class="t" data-l="zh">聯絡人姓名</span><span class="t" data-l="en">Your name</span><span class="req"><span class="t" data-l="ja">必須</span><span class="t" data-l="zh">必填</span><span class="t" data-l="en">Required</span></span></label>
+          <input id="f-nm" name="name" type="text" autocomplete="name" required>
+          <p class="field__err" data-field-err><span class="t" data-l="ja">お名前を入力してください。</span><span class="t" data-l="zh">請填寫姓名。</span><span class="t" data-l="en">Please enter your name.</span></p>
+        </div>
+        <div class="field">
+          <label for="f-em"><span class="t" data-l="ja">メールアドレス</span><span class="t" data-l="zh">電子郵件</span><span class="t" data-l="en">Email</span><span class="req"><span class="t" data-l="ja">必須</span><span class="t" data-l="zh">必填</span><span class="t" data-l="en">Required</span></span></label>
+          <input id="f-em" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+          <p class="field__err" data-field-err><span class="t" data-l="ja">メールアドレスの形式が正しくありません。</span><span class="t" data-l="zh">電子郵件格式不正確。</span><span class="t" data-l="en">That email address doesn't look right.</span></p>
+          <p class="field__hint"><span class="t" data-l="ja">返信先として使用します。</span><span class="t" data-l="zh">我們會用這個信箱回覆你。</span><span class="t" data-l="en">We'll reply to this address.</span></p>
+        </div>
+        <div class="field">
+          <label for="f-tp"><span class="t" data-l="ja">ご相談内容</span><span class="t" data-l="zh">諮詢類型</span><span class="t" data-l="en">Topic</span></label>
+          <select id="f-tp" name="topic">
+            <option value="accounting" data-ja="会計・財務の自動化" data-zh="會計財務自動化" data-en="Accounting automation">会計・財務の自動化</option>
+            <option value="dx" data-ja="DX・業務設計" data-zh="DX 與流程設計" data-en="DX / process design">DX・業務設計</option>
+            <option value="ai" data-ja="AIエージェント" data-zh="AI Agent" data-en="AI agents">AIエージェント</option>
+            <option value="bi" data-ja="データ分析（Power BI）" data-zh="數據分析（Power BI）" data-en="Data analysis (Power BI)">データ分析（Power BI）</option>
+            <option value="course" data-ja="講座について" data-zh="課程相關" data-en="Courses">講座について</option>
+            <option value="other" data-ja="その他" data-zh="其他" data-en="Something else">その他</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="f-ms"><span class="t" data-l="ja">ご相談の内容</span><span class="t" data-l="zh">想說的話</span><span class="t" data-l="en">What's going on</span></label>
+          <textarea id="f-ms" name="message" data-ph-ja="例）毎月の請求書処理に 2 日かかっています。" data-ph-zh="例）每個月的請款處理要花兩天。" data-ph-en="e.g. invoice processing takes two days every month." placeholder=""></textarea>
+          <p class="field__hint"><span class="t" data-l="ja">対象業務・頻度・現在の手順が分かると話が早いです。</span><span class="t" data-l="zh">若能寫上對象作業、頻率與目前做法，會更好討論。</span><span class="t" data-l="en">Mentioning the task, how often it runs and how it's done now helps a lot.</span></p>
+        </div>
+        <div class="check">
+          <input id="f-ag" name="agree" type="checkbox" required>
+          <label for="f-ag"><span class="t" data-l="ja">個人情報の取り扱いに同意します。</span><span class="t" data-l="zh">我同意個人資料的處理方式。</span><span class="t" data-l="en">I agree to the handling of my personal data.</span></label>
+        </div>
+        <button class="btn btn--block" type="submit">
+          <span class="t" data-l="ja">送信する</span><span class="t" data-l="zh">送出</span><span class="t" data-l="en">Send</span>
+          <span class="btn__arrow" aria-hidden="true">→</span>
+        </button>
+        <p class="form__ok" data-form-ok role="status">
+          <span class="t" data-l="ja">入力内容を確認しました。このプロトタイプでは送信されません（送信先の設定は実装時に行います）。</span>
+          <span class="t" data-l="zh">已確認輸入內容。此原型不會實際送出（寄送端點將於實作階段設定）。</span>
+          <span class="t" data-l="en">Input checked. This prototype does not submit anything — the endpoint is wired up at implementation.</span>
+        </p>
+        <p class="form__note">PROTOTYPE — <span class="t" data-l="ja">送信先未設定。実装時にフォーム送信先（メール or API）とスパム対策を接続します。</span><span class="t" data-l="zh">尚未設定寄送端點。實作時會接上表單收件（Email 或 API）與防濫用機制。</span><span class="t" data-l="en">No endpoint yet. At implementation this form will post to an email service or API, with spam protection.</span></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div class="ftr__brand">
+        <a class="brand" href="index.html">
+          <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+          <span class="brand__txt">会計エンテック事務所</span>
+        </a>
+        <p><span class="t" data-l="ja">会計の実務を知るエンジニアが、業務プロセスの自動化を設計する事務所です。</span><span class="t" data-l="zh">由懂會計實務的工程師，設計業務流程自動化的事務所。</span><span class="t" data-l="en">An office where engineers who know accounting practice design the automation of business processes.</span></p>
+      </div>
+      <div>
+        <h4>Menu</h4>
+        <ul>
+          <li><a href="#services"><span class="t" data-l="ja">サービス</span><span class="t" data-l="zh">服務</span><span class="t" data-l="en">Services</span></a></li>
+          <li><a href="#projects"><span class="t" data-l="ja">導入事例</span><span class="t" data-l="zh">專案展示</span><span class="t" data-l="en">Work</span></a></li>
+          <li><a href="courses.html"><span class="t" data-l="ja">講座</span><span class="t" data-l="zh">課程</span><span class="t" data-l="en">Courses</span></a></li>
+          <li><a href="#faq"><span class="t" data-l="ja">よくある質問</span><span class="t" data-l="zh">常見問題</span><span class="t" data-l="en">FAQ</span></a></li>
+          <li><a href="member.html"><span class="t" data-l="ja">会員ログイン</span><span class="t" data-l="zh">會員登入</span><span class="t" data-l="en">Member sign-in</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram — 會計工程師</a></li>
+          <li><a href="#contact"><span class="t" data-l="ja">お問い合わせ</span><span class="t" data-l="zh">聯絡我們</span><span class="t" data-l="en">Contact</span></a></li>
+          <li><a href="mailto:contact@entech-office.example">contact@entech-office.example</a></li>
+        </ul>
+      </div>
+      <div style="display:flex;align-items:flex-start;justify-content:flex-start">
+        <span class="seal" aria-hidden="true"><span class="t" data-l="ja">会計<br>技術</span><span class="t" data-l="zh">會計<br>技術</span><span class="t" data-l="en">ACC<br>TECH</span></span>
+      </div>
+    </div>
+    <div class="ftr__bt">
+      <span>© <span data-year>2026</span> 会計エンテック事務所</span>
+      <span><span class="t" data-l="ja">プライバシーポリシー（準備中）</span><span class="t" data-l="zh">隱私權政策（準備中）</span><span class="t" data-l="en">Privacy policy (in preparation)</span> · <span class="t" data-l="ja">特定商取引法に基づく表記（準備中）</span><span class="t" data-l="zh">商業交易法標示（準備中）</span><span class="t" data-l="en">Commercial disclosure (in preparation)</span></span>
+    </div>
+
+    <!-- Visible language links: real hrefs, no JS required for a crawler -->
+    <div class="ftr__langs" style="margin-top:var(--sp-4);padding-top:var(--sp-4);border-top:1px solid var(--ink-800)">
+      <span style="font-family:var(--font-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-500)">Language</span>
+      <a href="index.html?lang=ja" hreflang="ja" lang="ja">日本語</a>
+      <a href="index.html?lang=zh" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+      <a href="index.html?lang=en" hreflang="en" lang="en">English</a>
+    </div>
+  </div>
+</footer>
+
+<script src="site.js?v=1.3"></script>
+<script>
+/* Desktop CTA only from 1100px — otherwise the header gets crowded */
+(function () {
+  var cta = document.querySelector('[data-desktop-cta]');
+  if (!cta) return;
+  var mq = window.matchMedia('(min-width: 1100px)');
+  function sync() { cta.style.display = mq.matches ? '' : 'none'; }
+  sync();
+  if (mq.addEventListener) mq.addEventListener('change', sync);
+  else if (mq.addListener) mq.addListener(sync);
+})();
+</script>
+</body>
+</html>
