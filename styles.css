@@ -628,6 +628,7 @@ form{background:var(--white);border:var(--rule);border-radius:var(--radius);padd
   border:1px solid var(--ink-700);border-radius:var(--radius);padding:var(--sp-6);
   display:flex;flex-direction:column;gap:var(--sp-4);background:rgba(255,255,255,.02)
 }
+.social-cards{display:grid;gap:var(--sp-4)}
 .ig__row{display:flex;align-items:center;gap:var(--sp-3)}
 .ig__avatar{width:42px;height:42px;border-radius:50%;border:1px solid var(--ink-600);display:grid;place-items:center;flex-shrink:0;color:var(--ink-300)}
 .ig__handle{font-family:var(--font-mono);font-size:11px;color:var(--ink-500);letter-spacing:.04em}
